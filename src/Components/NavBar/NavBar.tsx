@@ -2,7 +2,7 @@ import {
     NavContainer,
     NavList,
     NavItem,
-} from './style';
+} from './styles';
 
 interface NavBarProps {
     isNavVisible: boolean;

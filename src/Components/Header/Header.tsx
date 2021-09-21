@@ -5,7 +5,7 @@ import {
     Title,
     HamburgerContainer,
     Hamburger,
- } from './style';
+ } from './styles';
 
 const Header = () => {
 

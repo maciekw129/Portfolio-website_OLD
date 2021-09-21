@@ -1,13 +1,13 @@
 import GlobalStyles from './globalStyles';
 import Header from './Components/Header/Header';
-import AboutMe from './Components/AboutMe/AboutMe';
+import Hero from './Components/Hero/Hero';
 
 const App = () => {
   return (
     <>
       <GlobalStyles />
       <Header />
-      <AboutMe />
+      <Hero />
     </>
   )
 };

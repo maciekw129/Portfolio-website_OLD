@@ -5,7 +5,7 @@ import {
     Title,
 } from './styles';
 
-const AboutMe = () => {
+const Hero = () => {
     return(
         <AboutMeContainer>
             <TextContainer>
@@ -17,4 +17,4 @@ const AboutMe = () => {
     )
 };
 
-export default AboutMe;
+export default Hero;
