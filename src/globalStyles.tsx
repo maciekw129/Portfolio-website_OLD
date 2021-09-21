@@ -11,10 +11,6 @@ const GlobalStyles = createGlobalStyle`
         box-sizing: border-box;
     }
 
-    h1, h2, h3, h4, h5, h6, p {
-        color: hsl(0, 0%, 97%);
-    }
-
     ul {
         list-style-type: none;
     }

@@ -7,7 +7,7 @@ interface Props {
 export const NavContainer = styled.nav`
     position: absolute;
     right: 0;
-    top: 6rem;
+    top: 4rem;
     width: 100%;
     overflow: hidden;
 
@@ -25,7 +25,7 @@ export const NavList = styled.ul<Props>`
 export const NavItem = styled.li`
     padding: 2rem 2rem;
     text-align: center;
-
+    z-index: 999;
     &:hover {
         cursor: pointer;
     }

@@ -17,7 +17,7 @@ const Header = () => {
 
     return (
             <HeaderContainer>
-                <Title>Maciej Walecki</Title>
+                <Title>MW</Title>
                 <HamburgerContainer onClick={toggleIsNavVisible} isNavVisible={isNavVisible}>
                     <Hamburger isNavVisible={isNavVisible} />
                 </HamburgerContainer>
