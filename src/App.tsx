@@ -1,14 +1,18 @@
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import GlobalStyles from './globalStyles';
 import Header from './Components/Header/Header';
 
 
-export default function App() {
+const App = () => {
   return (
       <Router>
+        <GlobalStyles />
         <Header />
         <Switch>
 
         </Switch>
       </Router>
   )
-}
+};
+
+export default App;
