@@ -15,6 +15,10 @@ const GlobalStyles = createGlobalStyle`
         font-family: 'Josefin sans', sans-serif;
     }
 
+    a {
+        color: black;
+    }
+
     ul {
         list-style-type: none;
     }

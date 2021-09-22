@@ -23,10 +23,21 @@ export const NavList = styled.ul<Props>`
 `;
 
 export const NavItem = styled.li`
+    position: relative;
     padding: 2rem 2rem;
     text-align: center;
     z-index: 999;
+
     &:hover {
         cursor: pointer;
+    }
+
+    &::after {
+        content: "";
+        position: absolute;
+        width: 30%;
+        top: 0;
+        left: 35%;
+        border-top: 1px solid black;
     }
 `;

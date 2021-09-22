@@ -27,7 +27,7 @@ const Header = () => {
             <HeaderContainer isHeaderTop={isHeaderTop}>
                 <Title>MW</Title>
                 <ButtonsContainer>
-                    <p>download CV</p>
+                    <a href='#'>download CV</a>
                     <HamburgerContainer onClick={toggleIsNavVisible} isNavVisible={isNavVisible}>
                         <Hamburger isNavVisible={isNavVisible} />
                     </HamburgerContainer>
