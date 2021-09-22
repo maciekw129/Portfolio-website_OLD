@@ -7,7 +7,7 @@ interface Props {
 export const NavContainer = styled.nav`
     position: absolute;
     right: 0;
-    top: 4rem;
+    top: 5rem;
     width: 100%;
     overflow: hidden;
 

@@ -1,37 +1,40 @@
 import styled from "styled-components/macro";
 
-interface Props {
-    isNavVisible: boolean;
-};
-
-export const HeaderContainer = styled.header`
+export const HeaderContainer = styled.header<{ isHeaderTop: boolean }>`
     position: fixed;
     display: flex;
     top: 0;
     justify-content: space-between;
-    align-items: baseline;
+    align-items: center;
     height: 4rem;
     width: 100%;
-    background-color: hsl(0, 0%, 97%);
-    box-shadow: 0 0.01rem 5px #808080;
+    background-color: hsl(0, 0%, 100%);
+    box-shadow: ${({ isHeaderTop }) => isHeaderTop ? 'none' : '0 0.01rem 5px #808080'};
+    transition: box-shadow 0.2s linear;
 `;
 
 export const Title = styled.h1`
-    font-family: 'Josefin sans', sans-serif;
     color: #027353;
     line-height: 2.5rem;
     letter-spacing: -0.1rem;
-    padding: 0 1.5rem;
-    
+    padding-left: 1rem;
+    height: 2rem;
 `;
 
-export const HamburgerContainer = styled.div<Props>`
+export const ButtonsContainer = styled.div`
+    display: flex;
+    align-items: center;
+    height: 100%;
+`;
+
+export const HamburgerContainer = styled.div<{ isNavVisible: boolean}>`
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: ${({ isNavVisible }) => isNavVisible ? '#027353' : 'hsl(0, 0%, 97%)'};
+    background-color: ${({ isNavVisible }) => isNavVisible ? '#027353' : 'hsl(0, 0%, 100%)'};
     width: 150px;
     height: 100%;
+    margin-left: 0.5rem;
     transition: background-color 0.2s linear;
     cursor: pointer;
 
@@ -51,7 +54,7 @@ export const HamburgerContainer = styled.div<Props>`
     }
 `;
 
-export const Hamburger = styled.div<Props>`
+export const Hamburger = styled.div<{ isNavVisible: boolean}>`
     width: 25px;
     height: 25px;
     background: none;

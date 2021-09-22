@@ -20,6 +20,5 @@ export const TextContainer = styled(TextDecoration)`
 
 export const Title = styled.h1`
     font-size: 250%;
-    font-family: 'Josefin sans';
     margin-bottom: 2rem;
 `;
