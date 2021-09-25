@@ -4,8 +4,8 @@ import { TextDecoration } from '../TextDecoration/TextDecoration';
 export const HeroContainer = styled.div<{ isNavVisible: boolean }>`
     display: flex;
     flex-direction: column;
-    max-height: ${({ isNavVisible }) => isNavVisible ? '0px' : '900px'};
-    transition: max-height 0.75s ease-in-out;
+    max-height: ${({ isNavVisible }) => isNavVisible ? '0px' : '670px'};
+    transition: ${({ isNavVisible }) => isNavVisible ? 'max-height 0.75s ease-in-out' : 'max-height 0.75s ease-in-out 0.9s'};
 
     @media only screen and (min-width: 420px) {
         margin-top: 4rem;

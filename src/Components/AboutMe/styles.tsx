@@ -7,8 +7,8 @@ export const AboutMeContainer = styled.article<{ isNavVisible: boolean }>`
     width: 100%;
     background-color: #ffffff;//#E6F5FF;
     overflow: hidden;
-    max-height: ${({ isNavVisible }) => isNavVisible ? '0px' : '900px'};
-    transition: max-height 0.75s ease-in-out;
+    max-height: ${({ isNavVisible }) => isNavVisible ? '0px' : '250px'};
+    transition: ${({ isNavVisible }) => isNavVisible ? 'max-height 0.75s ease-in-out' : 'max-height 0.75s ease-in-out 0.9s'};
 `;
 
 export const Title = styled.h2`

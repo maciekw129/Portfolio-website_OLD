@@ -3,8 +3,8 @@ import styled from 'styled-components/macro';
 export const NavContainer = styled.nav<{ isNavVisible: boolean }>`
     width: 100%;
     overflow: hidden;
-    max-height: ${({ isNavVisible }) => isNavVisible ? '500px' : '0px'};
-    transition: max-height 0.5s ease-in-out 0.9s;
+    max-height: ${({ isNavVisible }) => isNavVisible ? '350px' : '0px'};
+    transition: ${({ isNavVisible }) => isNavVisible ? 'max-height 0.75s ease-in-out 0.9s' : 'max-height 0.75s ease-in-out'};
 
     @media only screen and (min-width: 490px) {
         width: 150px;
