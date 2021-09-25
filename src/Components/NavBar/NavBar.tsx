@@ -1,17 +1,20 @@
+import { useContext } from 'react';
+import { NavContext } from '../../Context/NavContext';
 import {
     NavContainer,
     NavList,
     NavItem,
 } from './styles';
 
-interface NavBarProps {
-    isNavVisible: boolean;
-}
 
-const NavBar = ({ isNavVisible }: NavBarProps) => {
+
+const NavBar = () => {
+
+    const [isNavVisible] = useContext(NavContext);
+
     return(
-        <NavContainer>
-            <NavList isNavVisible={isNavVisible}>
+        <NavContainer isNavVisible={isNavVisible}>
+            <NavList>
                 <NavItem>About Me</NavItem>
                 <NavItem>My skills</NavItem>
                 <NavItem>My projects</NavItem>

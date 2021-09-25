@@ -1,14 +1,16 @@
 import styled from 'styled-components/macro';
 import { TextDecoration } from '../TextDecoration/TextDecoration';
 
-export const AboutMeContainer = styled.div`
+export const HeroContainer = styled.div<{ isNavVisible: boolean }>`
     display: flex;
     flex-direction: column;
-    margin-top: 6rem;
+    max-height: ${({ isNavVisible }) => isNavVisible ? '0px' : '900px'};
+    transition: max-height 0.75s ease-in-out;
 
     @media only screen and (min-width: 420px) {
         margin-top: 4rem;
     }
+    overflow: hidden;
 `;
 
 export const TextContainer = styled(TextDecoration)`
@@ -21,4 +23,8 @@ export const TextContainer = styled(TextDecoration)`
 export const Title = styled.h1`
     font-size: 250%;
     margin-bottom: 2rem;
+
+    & span {
+        color: #BF2B00;
+    }
 `;

@@ -1,24 +1,17 @@
 import styled from 'styled-components/macro';
 
-interface Props {
-    isNavVisible: boolean;
-};
-
-export const NavContainer = styled.nav`
-    position: absolute;
-    right: 0;
-    top: 5rem;
+export const NavContainer = styled.nav<{ isNavVisible: boolean }>`
     width: 100%;
     overflow: hidden;
+    max-height: ${({ isNavVisible }) => isNavVisible ? '500px' : '0px'};
+    transition: max-height 0.5s ease-in-out 0.9s;
 
     @media only screen and (min-width: 490px) {
         width: 150px;
     };
 `;
 
-export const NavList = styled.ul<Props>`
-    transform: ${({ isNavVisible }) => isNavVisible ? 'translateX(0%)' : 'TranslateX(100%)'};
-    transition: transform 0.5s ease-in-out;
+export const NavList = styled.ul`
     background-color: hsl(0, 0%, 95%);
 `;
 
@@ -30,14 +23,5 @@ export const NavItem = styled.li`
 
     &:hover {
         cursor: pointer;
-    }
-
-    &::after {
-        content: "";
-        position: absolute;
-        width: 30%;
-        top: 0;
-        left: 35%;
-        border-top: 1px solid black;
     }
 `;

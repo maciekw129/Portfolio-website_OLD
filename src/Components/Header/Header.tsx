@@ -1,5 +1,5 @@
-import { useState, useEffect } from 'react';
-import NavBar from '../NavBar/NavBar';
+import { useState, useEffect, useContext } from 'react';
+import { NavContext } from '../../Context/NavContext';
 import { 
     HeaderContainer,
     Title,
@@ -10,7 +10,7 @@ import {
 
 const Header = () => {
 
-    const [isNavVisible, setIsNavVisible] = useState(false);
+    const [isNavVisible, setIsNavVisible] = useContext(NavContext);
     const [isHeaderTop, setIsHeaderTop] = useState(true);
 
     useEffect(() => {
@@ -27,12 +27,11 @@ const Header = () => {
             <HeaderContainer isHeaderTop={isHeaderTop}>
                 <Title>MW</Title>
                 <ButtonsContainer>
-                    <a href='#'>download CV</a>
+                    <a>download CV</a>
                     <HamburgerContainer onClick={toggleIsNavVisible} isNavVisible={isNavVisible}>
                         <Hamburger isNavVisible={isNavVisible} />
                     </HamburgerContainer>
                 </ButtonsContainer>
-                <NavBar isNavVisible={isNavVisible} />
             </HeaderContainer>
     )
 };
