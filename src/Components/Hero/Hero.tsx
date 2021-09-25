@@ -1,5 +1,3 @@
-import { useContext } from 'react';
-import { NavContext } from '../../Context/NavContext'
 import heroPhoto from './heroPhoto.jpg';
 import {
     HeroContainer,
@@ -8,11 +6,8 @@ import {
 } from './styles';
 
 const Hero = () => {
-
-    const [isNavVisible] = useContext(NavContext);
-
     return(
-        <HeroContainer isNavVisible={isNavVisible}>
+        <HeroContainer>
             <TextContainer>
                 <Title>Hello<span>!</span></Title>
                 <p>My name is Maciej Walecki. I'm junior Frontend Developer from Poland.</p>
