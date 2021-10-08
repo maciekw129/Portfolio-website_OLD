@@ -1,5 +1,5 @@
 import { useState, useEffect, useContext } from 'react';
-import { NavContext } from '../../Context/NavContext';
+import { AppContext } from '../../Context/AppContext';
 import { 
     HeaderContainer,
     Title,
@@ -8,27 +8,23 @@ import {
     Hamburger,
  } from './styles';
 
-const Header = () => {
+const Header: React.FC = () => {
 
-    const [isNavVisible, setIsNavVisible] = useContext(NavContext);
+    const { isNavVisible, setIsNavVisible, isEnglish, setIsEnglish } = useContext(AppContext);
     const [isHeaderTop, setIsHeaderTop] = useState(true);
 
     useEffect(() => {
         window.addEventListener('scroll', () =>
             setIsHeaderTop(window.pageYOffset === 0)
         );
-    })
-
-    const toggleIsNavVisible = () => {
-        setIsNavVisible(!isNavVisible);
-    };
+    });
 
     return (
             <HeaderContainer isHeaderTop={isHeaderTop}>
                 <Title>MW</Title>
                 <ButtonsContainer>
-                    <a>download CV</a>
-                    <HamburgerContainer onClick={toggleIsNavVisible} isNavVisible={isNavVisible}>
+                    <p onClick={() => setIsEnglish(!isEnglish)}>{isEnglish ? 'Polish' : 'English'}</p>
+                    <HamburgerContainer onClick={() => setIsNavVisible(!isNavVisible)} isNavVisible={isNavVisible}>
                         <Hamburger isNavVisible={isNavVisible} />
                     </HamburgerContainer>
                 </ButtonsContainer>

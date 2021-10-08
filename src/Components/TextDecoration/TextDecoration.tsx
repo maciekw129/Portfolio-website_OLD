@@ -3,6 +3,10 @@ import styled from 'styled-components/macro';
 export const TextDecoration = styled.div`
     padding: 2rem;
     margin: 1rem;
+    width: 90%;
+    z-index: -1;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
     position: relative;
 
     &::before {

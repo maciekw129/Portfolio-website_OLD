@@ -1,18 +1,24 @@
 import heroPhoto from './heroPhoto.jpg';
+import { TextDecoration } from '../TextDecoration/TextDecoration';
 import {
     HeroContainer,
-    TextContainer,
     Title,
 } from './styles';
 
-const Hero = () => {
+interface Props {
+    title: string,
+    text: string,
+};
+
+const Hero: React.FC<Props> = ({title, text} : Props) => {
+
     return(
         <HeroContainer>
-            <TextContainer>
-                <Title>Hello<span>!</span></Title>
-                <p>My name is Maciej Walecki. I'm junior Frontend Developer from Poland.</p>
-            </TextContainer>
-            <img src={heroPhoto} alt="My photo"/>
+            <TextDecoration>
+                <Title>{title}</Title>
+                <p>{text}</p>
+            </TextDecoration>
+            <img src={heroPhoto} alt="Me"/>
         </HeroContainer>
     )
 };

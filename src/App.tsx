@@ -1,26 +1,30 @@
 import GlobalStyles from './globalStyles';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import { NavProvider } from './Context/NavContext';
+import { AppProvider } from './Context/AppContext';
 import Header from './Components/Header/Header';
 import Nav from './Components/NavBar/NavBar';
-import MainPage from './Components/MainPage/MainPage';
+import MainPage from './Pages/MainPage/MainPage';
 import Footer from './Components/Footer/Footer';
+import MySkillsPage from './Pages/MySkillsPage/MySkillsPage';
 
 const App = () => {
   return (
-    <Router>
-      <NavProvider>
-        <GlobalStyles />
-        <Header />
-        <Nav />
-        <Switch>
-          <Route path='/' exact>
-            <MainPage />
-          </Route>
-        </Switch>
-        <Footer />
-      </NavProvider>
-    </Router>
+    <AppProvider>
+      <Router>
+          <GlobalStyles />
+          <Header />
+          <Nav />
+          <Switch>
+            <Route path='/' exact>
+              <MainPage />
+            </Route>
+            <Route path='/my-skills' exact>
+              <MySkillsPage />
+            </Route>
+          </Switch>
+          <Footer />
+      </Router>
+    </AppProvider>
   )
 };
 
