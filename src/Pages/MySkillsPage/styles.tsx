@@ -1,7 +1,7 @@
 import styled from 'styled-components/macro';
 
 export const MySkillsPageContainer = styled.section<{ isNavVisible: boolean }>`
-    max-height: ${({ isNavVisible }) => isNavVisible ? '0px' : '910px'};
+    max-height: ${({ isNavVisible }) => isNavVisible ? '0px' : '1200px'};
     transition: ${({ isNavVisible }) => isNavVisible ? 'max-height 0.75s ease-in-out' : 'max-height 0.75s ease-in-out 0.9s'};
     overflow: hidden;
 `;

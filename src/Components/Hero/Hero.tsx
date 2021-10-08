@@ -17,9 +17,12 @@ const Hero: React.FC<Props> = ({title, text, heroPhoto, character} : Props) => {
     const [colorRadius, setColorRadius] = useState(163);
 
     useEffect(() => {
-        setTimeout(() => {
+        const timeout = setTimeout(() => {
             setColorRadius(colorRadius + 90);
         }, 1000)
+        return () => {
+            clearTimeout(timeout)
+        }
     }, [colorRadius])
 
     return(

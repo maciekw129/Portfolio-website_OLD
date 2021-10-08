@@ -22,10 +22,10 @@ const NavBar: React.FC = () => {
     return(
         <NavContainer isNavVisible={isNavVisible}>
             <NavList>
-                <NavItem onClick={handleClick}><Link to='/'>About Me</Link></NavItem>
-                <NavItem onClick={handleClick}><Link to='/my-skills'>My skills</Link></NavItem>
-                <NavItem onClick={handleClick}><Link to='/my-projects'>My projects</Link></NavItem>
-                <NavItem onClick={handleClick}><Link to='/contact-me'>Contact Me</Link></NavItem>
+                <Link to='/'><NavItem onClick={handleClick}>About Me</NavItem></Link>
+                <Link to='/my-skills'><NavItem onClick={handleClick}>My skills</NavItem></Link>
+                <Link to='/my-projects'><NavItem onClick={handleClick}>My projects</NavItem></Link>
+                <Link to='/contact-me'><NavItem onClick={handleClick}>Contact Me</NavItem></Link>
             </NavList>
         </NavContainer>
     )

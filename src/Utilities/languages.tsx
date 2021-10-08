@@ -12,10 +12,9 @@ export const mainPageLanguages = {
 
 export const mySkillsPageLanguages = {
     english: {
-        mySkillsPageTitle: 'My Skills',
-        mySkillsPageText: `There is my skills`,
+        mySkillsPageTitle: 'My skills',
     },
     polish: {
-
+        mySkillsPageTitle: 'Moje umiejętności',
     },
 }
