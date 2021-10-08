@@ -1,4 +1,4 @@
-import heroPhoto from './heroPhoto.jpg';
+import { useEffect, useState } from 'react'; 
 import { TextDecoration } from '../TextDecoration/TextDecoration';
 import {
     HeroContainer,
@@ -8,14 +8,24 @@ import {
 interface Props {
     title: string,
     text: string,
+    character: string,
+    heroPhoto: any,
 };
 
-const Hero: React.FC<Props> = ({title, text} : Props) => {
+const Hero: React.FC<Props> = ({title, text, heroPhoto, character} : Props) => {
+
+    const [colorRadius, setColorRadius] = useState(163);
+
+    useEffect(() => {
+        setTimeout(() => {
+            setColorRadius(colorRadius + 90);
+        }, 1000)
+    }, [colorRadius])
 
     return(
         <HeroContainer>
             <TextDecoration>
-                <Title>{title}</Title>
+                <Title colorRadius={colorRadius}>{title}<span>{character}</span></Title>
                 <p>{text}</p>
             </TextDecoration>
             <img src={heroPhoto} alt="Me"/>

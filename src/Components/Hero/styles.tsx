@@ -9,11 +9,12 @@ export const HeroContainer = styled.div`
     }
 `;
 
-export const Title = styled.h1`
+export const Title = styled.h1<{ colorRadius: number }>`
     font-size: 250%;
     margin-bottom: 2rem;
 
     & span {
-        color: #BF2B00;
+        color: ${({ colorRadius }) => `hsl(${colorRadius}, 50%, 40%)`};
+        transition: color 1s linear;
     }
 `;

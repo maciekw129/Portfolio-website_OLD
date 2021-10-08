@@ -21,7 +21,7 @@ export const Title = styled.h2`
     padding-bottom: 0;
 
     & span {
-        color: #BF2B00;
+        color: #027353;
     }
 `;
 

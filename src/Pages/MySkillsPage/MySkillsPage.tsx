@@ -2,6 +2,7 @@ import Hero from '../../Components/Hero/Hero';
 import { mySkillsPageLanguages } from '../../Utilities/languages';
 import { useContext, useState, useEffect } from 'react';
 import { AppContext } from '../../Context/AppContext';
+import mySkillsHeroImage from '../../Images/mySkillsHeroImage.svg';
 import {
     MySkillsPageContainer,
 } from './styles';
@@ -17,13 +18,15 @@ const MySkillsPage: React.FC = () => {
 
     useEffect(() => {
         isEnglish ? setText(mySkillsPageLanguages.english) : setText(mySkillsPageLanguages.polish);
-    })
+    }, [isEnglish])
 
     return(
         <MySkillsPageContainer isNavVisible={isNavVisible}>
             <Hero 
                 title={text.mySkillsPageTitle}
                 text={text.mySkillsPageText}
+                heroPhoto={mySkillsHeroImage}
+                character="."
             />
         </MySkillsPageContainer>
     )

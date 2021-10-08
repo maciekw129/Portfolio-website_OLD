@@ -18,6 +18,7 @@ export const TextDecoration = styled.div`
         left: 0;
         width: 50%;
         height: 50%;
+        animation: slideIn 3s ease-in-out 1s;
     }
 
     &::after {
@@ -29,5 +30,23 @@ export const TextDecoration = styled.div`
         right: 0;
         width: 50%;
         height: 50%;
+        animation: slideIn 3s ease-in-out 1s;
+    }
+
+    @keyframes slideIn {
+        0% {
+            opacity: 0%;
+            width: 0%;
+            height: 0%;
+        }
+        50% {
+            opacity: 100%;
+            width: 60%;
+            height: 60%;
+        }
+        100% {
+            width: 50%;
+            height: 50%;
+        }
     }
 `;   

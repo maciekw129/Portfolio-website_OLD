@@ -1,6 +1,7 @@
 import { useContext, useState, useEffect } from 'react';
 import { AppContext } from '../../Context/AppContext';
 import { mainPageLanguages } from '../../Utilities/languages';
+import mainPageHeroImage from '../../Images/mainPageHeroImage.svg';
 import Hero from '../../Components/Hero/Hero';
 import {
     MainPageContainer,
@@ -27,6 +28,8 @@ const MainPage: React.FC = () => {
             <Hero 
                 title={text.mainPageTitle}
                 text={text.mainPageText}
+                heroPhoto={mainPageHeroImage}
+                character="!"
             />
             <AboutMeContainer isNavVisible={isNavVisible}>
                 <Title>About Me<span>.</span></Title>
