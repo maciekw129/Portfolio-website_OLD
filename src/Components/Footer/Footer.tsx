@@ -9,7 +9,7 @@ import {
     IconsContainer,
 } from './styles';
 
-const Footer = () => {
+const Footer: React.FC = () => {
     return(
         <FooterContainer>
             <IconsContainer>

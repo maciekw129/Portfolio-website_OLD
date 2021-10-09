@@ -1,6 +1,7 @@
 import styled from 'styled-components/macro';
 
 export const SkillContainer = styled.div`
+    align-self: flex-start;
     display: flex;
     padding: 2rem;
     margin: 1rem 0;
