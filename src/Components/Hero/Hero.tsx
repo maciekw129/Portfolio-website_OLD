@@ -9,16 +9,15 @@ interface Props {
     title: string,
     text: string,
     character: string,
-    heroPhoto: any,
 };
 
-const Hero: React.FC<Props> = ({title, text, heroPhoto, character} : Props) => {
+const Hero: React.FC<Props> = ({title, text, character} : Props) => {
 
     const [colorRadius, setColorRadius] = useState(163);
 
     useEffect(() => {
         const timeout = setTimeout(() => {
-            setColorRadius(colorRadius + 90);
+            colorRadius >= 360 ? setColorRadius(colorRadius - 360) : setColorRadius(colorRadius + 90);
         }, 1000)
         return () => {
             clearTimeout(timeout)
@@ -31,7 +30,6 @@ const Hero: React.FC<Props> = ({title, text, heroPhoto, character} : Props) => {
                 <Title colorRadius={colorRadius}>{title}<span>{character}</span></Title>
                 <p>{text}</p>
             </TextDecoration>
-            <img src={heroPhoto} alt="Me"/>
         </HeroContainer>
     )
 };

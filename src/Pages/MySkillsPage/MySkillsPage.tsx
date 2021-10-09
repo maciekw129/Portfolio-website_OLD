@@ -9,7 +9,8 @@ import {
     faCss3,
     faJs,
     faReact,
-    faGit,
+    faGithub,
+    faSass,
 } from '@fortawesome/free-brands-svg-icons';
 import {
     MySkillsPageContainer,
@@ -33,14 +34,15 @@ const MySkillsPage: React.FC = () => {
             <Hero 
                 title={text.mySkillsPageTitle}
                 text={text.mySkillsPageText}
-                heroPhoto={mySkillsHeroImage}
                 character="."
             />
-            <Skill icon={faHtml5} title="HTML" />
-            <Skill icon={faCss3} title="CSS" />
-            <Skill icon={faJs} title="JavaScript" />
-            <Skill icon={faReact} title="React" />
-            <Skill icon={faGit} title="Git" />
+            <img src={mySkillsHeroImage} />
+            <Skill icon={faHtml5} title="HTML (Semantic HTML, JSX)" />
+            <Skill icon={faCss3} title="CSS (responsive design, flexbox, grid)" />
+            <Skill icon={faSass} title="SASS, SCSS" />
+            <Skill icon={faJs} title="JavaScript (ES6, TypeScript)" />
+            <Skill icon={faReact} title="React (react hooks, react router, redux, styled components)" />
+            <Skill icon={faGithub} title="Git" />
         </MySkillsPageContainer>
     )
 }

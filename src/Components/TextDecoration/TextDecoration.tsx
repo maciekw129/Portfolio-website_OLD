@@ -16,21 +16,18 @@ export const TextDecoration = styled.div`
         position: absolute;
         top: 0;
         left: 0;
-        width: 50%;
-        height: 50%;
-        animation: slideIn 3s ease-in-out 1s;
+        animation: slideIn 3s ease-in-out 1s forwards;
     }
 
     &::after {
         content: '';
+        animation: slideIn 3s ease-in-out 1s;
         border-bottom: 1px solid black;
         border-right: 1px solid black;
         position: absolute;
+        animation: slideIn 3s ease-in-out 1s forwards;
         bottom: 0;
         right: 0;
-        width: 50%;
-        height: 50%;
-        animation: slideIn 3s ease-in-out 1s;
     }
 
     @keyframes slideIn {

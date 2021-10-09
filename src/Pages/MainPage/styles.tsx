@@ -4,6 +4,8 @@ export const MainPageContainer = styled.section<{ isNavVisible: boolean }>`
     max-height: ${({ isNavVisible }) => isNavVisible ? '0px' : '910px'};
     transition: ${({ isNavVisible }) => isNavVisible ? 'max-height 0.75s ease-in-out' : 'max-height 0.75s ease-in-out 0.9s'};
     overflow: hidden;
+    display: flex;
+    flex-direction: column;
 `;
 
 export const AboutMeContainer = styled.article<{ isNavVisible: boolean }>`

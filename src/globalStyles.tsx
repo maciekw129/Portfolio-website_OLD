@@ -28,6 +28,10 @@ const GlobalStyles = createGlobalStyle`
     ul {
         list-style-type: none;
     }
+
+    img {
+        width: 100%;
+    }
 `;
 
 export default GlobalStyles;

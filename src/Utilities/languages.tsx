@@ -13,6 +13,7 @@ export const mainPageLanguages = {
 export const mySkillsPageLanguages = {
     english: {
         mySkillsPageTitle: 'My skills',
+        mySkillsPageText: `I have completed Frontend career path at Codecademy. Now I'm practising my skills and learning new technologies by doing projects.`
     },
     polish: {
         mySkillsPageTitle: 'Moje umiejętności',
