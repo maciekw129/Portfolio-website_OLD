@@ -18,10 +18,12 @@ type Props = {
             [key:string]: string,
         },
     },
-    children?: React.ReactNode,  
+    children?: React.ReactNode,
+    character: string,
+    image: string,
 }
 
-const Page: React.FC<Props> = ({children, page}: Props) => {
+const Page: React.FC<Props> = ({children, page, character, image}: Props) => {
 
     const { isEnglish, isNavVisible } = useContext(AppContext);
     const [text, setText] = useState<textInterface>({});
@@ -35,8 +37,9 @@ const Page: React.FC<Props> = ({children, page}: Props) => {
             <Hero
                 title={text.title}
                 text={text.text}
-                character="."
+                character={character}
             />
+            <img src={image} alt='hero image' />
             {children}
         </PageContainer>
     )

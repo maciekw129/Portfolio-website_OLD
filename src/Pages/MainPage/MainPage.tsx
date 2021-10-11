@@ -1,5 +1,7 @@
-import languages  from '../../Utilities/languages';
+import { mainPage } from '../../Utilities/languages';
 import mainPageHeroImage from '../../Images/mainPageHeroImage.svg';
+import { AppContext } from '../../Context/AppContext';
+import { useContext } from 'react';
 import Page from '../../Components/Page/Page';
 import {
     AboutMeContainer,
@@ -9,14 +11,13 @@ import {
 
 const MainPage: React.FC = () => {
 
+    const { isEnglish } = useContext(AppContext);
     
-
     return(
-        <Page page={languages.mainPage}>
-            <img src={mainPageHeroImage} />
+        <Page page={mainPage} character='!' image={mainPageHeroImage}>
             <AboutMeContainer>
                 <Title>About Me<span>.</span></Title>
-                <Text>I'm 21 years old student of gastronomy and hospitality from Warsaw (Poland). Because of the gastronomy lockdown due to the covid-19 pandemic, I decided to change my carrier path and try myself in coding.</Text>
+                <Text>{isEnglish ? mainPage.english.aboutMe: mainPage.polish.aboutMe}</Text>
             </AboutMeContainer>
         </Page>
     )

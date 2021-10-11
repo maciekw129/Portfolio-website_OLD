@@ -1,6 +1,6 @@
 import Page from '../../Components/Page/Page';
 import Skill from '../../Components/Skill/Skill';
-import languages  from '../../Utilities/languages';
+import { mySkills } from '../../Utilities/languages';
 import mySkillsHeroImage from '../../Images/mySkillsHeroImage.svg';
 import { 
     faHtml5,
@@ -15,8 +15,7 @@ import {
 const MySkillsPage: React.FC = () => {
 
     return(
-        <Page page={languages.mySkills}>
-            <img src={mySkillsHeroImage} />
+        <Page page={mySkills} character='.' image={mySkillsHeroImage}>
             <Skill icon={faHtml5} title="HTML (Semantic HTML, JSX)" />
             <Skill icon={faCss3} title="CSS (responsive design, flexbox, grid)" />
             <Skill icon={faSass} title="SASS, SCSS" />
