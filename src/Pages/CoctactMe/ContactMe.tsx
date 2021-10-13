@@ -28,7 +28,7 @@ const ContactMe: React.FC = () => {
     return(
         <Page page={contactMe} character='!' image={contactMeHeroImage}>
                 <EmailForm onSubmit={sendEmail}>
-                    <label htmlFor="email">Your E-mail</label>
+                    <label htmlFor="email">Your e-mail</label>
                     <EmailInput 
                         required
                         type="email" 

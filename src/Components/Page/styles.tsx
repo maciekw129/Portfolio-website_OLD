@@ -7,3 +7,4 @@ export const PageContainer = styled.section<{ isNavVisible: boolean}>`
     display: flex;
     flex-direction: column;
 `;
+

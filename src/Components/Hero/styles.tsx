@@ -4,9 +4,11 @@ export const HeroContainer = styled.div`
     display: flex;
     flex-direction: column;
 
-    @media only screen and (min-width: 420px) {
-        margin-top: 4rem;
-    }
+    @media only screen and (min-width: 650px) {
+            margin-top: 2rem;
+            flex-direction: row;
+            align-items: flex-start;
+        }
 `;
 
 export const Title = styled.h1<{ colorRadius: number }>`
@@ -16,5 +18,11 @@ export const Title = styled.h1<{ colorRadius: number }>`
     & span {
         color: ${({ colorRadius }) => `hsl(${colorRadius}, 50%, 40%)`};
         transition: color 1s linear;
+    }
+`;
+
+export const Image = styled.img`
+    @media only screen and (min-width: 650px) {
+        width: 50%;
     }
 `;

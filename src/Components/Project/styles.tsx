@@ -3,6 +3,10 @@ import styled from 'styled-components/macro';
 export const ProjectContainer = styled.div`
     margin: 2rem 0;
     padding: 1rem;
+
+    @media only screen and (min-width: 650px) {
+        width: 50%;
+    }
 `;
 
 export const TextContainer = styled.div`

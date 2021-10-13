@@ -9,6 +9,10 @@ export const TextDecoration = styled.div`
     margin-bottom: 3rem;
     position: relative;
 
+    @media only screen and (min-width: 650px) {
+        margin-top: 0;
+    }
+
     &::before {
         content: '';
         border-top: 1px solid black;

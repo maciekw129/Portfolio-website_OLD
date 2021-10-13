@@ -38,8 +38,8 @@ const Page: React.FC<Props> = ({children, page, character, image}: Props) => {
                 title={text.title}
                 text={text.text}
                 character={character}
+                image={image}
             />
-            <img src={image} alt='hero image' />
             {children}
         </PageContainer>
     )

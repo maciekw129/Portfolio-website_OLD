@@ -16,7 +16,7 @@ const MainPage: React.FC = () => {
     return(
         <Page page={mainPage} character='!' image={mainPageHeroImage}>
             <AboutMeContainer>
-                <Title>About Me<span>.</span></Title>
+                <Title>{isEnglish ? mainPage.english.aboutMeTitle : mainPage.polish.aboutMeTitle}<span>.</span></Title>
                 <Text>{isEnglish ? mainPage.english.aboutMe: mainPage.polish.aboutMe}</Text>
             </AboutMeContainer>
         </Page>

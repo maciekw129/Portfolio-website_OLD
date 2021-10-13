@@ -3,15 +3,17 @@ import { TextDecoration } from '../TextDecoration/TextDecoration';
 import {
     HeroContainer,
     Title,
+    Image,
 } from './styles';
 
 interface Props {
     title: string,
     text: string,
     character: string,
+    image: string,
 };
 
-const Hero: React.FC<Props> = ({title, text, character} : Props) => {
+const Hero: React.FC<Props> = ({title, text, character, image} : Props) => {
 
     const [colorRadius, setColorRadius] = useState(163);
 
@@ -30,6 +32,7 @@ const Hero: React.FC<Props> = ({title, text, character} : Props) => {
                 <Title colorRadius={colorRadius}>{title}<span>{character}</span></Title>
                 <p>{text}</p>
             </TextDecoration>
+            <Image src={image} />
         </HeroContainer>
     )
 };

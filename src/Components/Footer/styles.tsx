@@ -16,4 +16,8 @@ export const IconsContainer = styled.div`
     justify-content: space-around;
     width: 50%;
     margin-bottom: 0.75rem;
+
+    @media only screen and (min-width: 650px) {
+        width: 20%;
+    }
 `;

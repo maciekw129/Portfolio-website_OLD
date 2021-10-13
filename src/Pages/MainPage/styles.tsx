@@ -6,6 +6,10 @@ export const AboutMeContainer = styled.article`
     justify-content: center;
     width: 100%;
     background-color: #ffffff;
+
+    @media only screen and (min-width: 650px) {
+            padding: 2rem;
+        }
 `;
 
 export const Title = styled.h2`
